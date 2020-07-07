@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend sensor de agua",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "client": "cd.. && cd frontend && npm start",
+    "dev": "concurrently \"nodemon app.js\" \"npm run client\""
+  },
+  "author": "David Contreras",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "child_process": "^1.0.2",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
