@@ -20,9 +20,16 @@ class sensorData extends Component {
     };
 
     render() {
+        var maxHeight = 170;
+        var offset = -30;
+        var value = maxHeight - ((this.state.rpiSensor / 100) * maxHeight);
+        value += offset;
+        var style = {
+            backgroundPositionY:  value
+        };
         return (
             <div>
-                <div className="waterTank"/>
+                <div className="waterTank" id="waterTank" style={style}/>
                 <h1 className="sensorValue">Sensor de agua: {this.state.rpiSensor} </h1>
                 <h1>Count: {this.state.count}</h1>
             </div>

@@ -5,13 +5,14 @@
 
 .sensorValue{
   position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%; 
+  right: 20%; 
   font-size: 48px;
-  text-align: center;
-  vertical-align: auto;
   color: black;
-  top: 40%;
-  left: 60%;
 }
+  
 
 .waterTank {
   position: absolute;
@@ -25,8 +26,8 @@
   border-radius: 15px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background: url(https://image.ibb.co/fmHm66/wave.png);
-  background-position: 0px 350px;
+  background-image: url('./wave.png');
+  background-position: 300px 150px;
   background-repeat: repeat-x;
   animation: llenado 10s ease-in-out infinite;
   box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
@@ -35,13 +36,57 @@
 
 
 @keyframes llenado {
-  50% {background-position: 1500px 0px;}
-  100% {background-position: 3000px 350px;}
+  /*0% {background-position: 300px 500px;}
+  25% {background-position: 300px 115px;}
+  50% {background-position: 300px 30px;}
+  75% {background-position: 300px 10px;}
+  100% {background-position: 400px -31px;}*/
+  0% {background-position-x: 0;}
+  50% {background-position-x: 50%;}
+  100% {background-position-x: 0%;}
 }
 
-@media screen and (max-width: 800px) {
-  .sensorValue {
-      top: 65%;
-      left: 40%;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sensorValue{
+    top: unset;
+    bottom: 0;
+    font-size: 24px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .sensorValue{
+    top: unset;
+    padding-bottom: 20%;
+    font-size: 24px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .sensorValue{
+    top: unset;
+    bottom: 0;
+    font-size: 24px;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .sensorValue{
+    top: unset;
+    bottom: 0;
+    font-size: 24px;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .sensorValue{
+    top: unset;
+    bottom: 0;
+    font-size: 24px;
   }
 }

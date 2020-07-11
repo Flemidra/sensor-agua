@@ -22,4 +22,10 @@ function App() {
 export default App;
 
 
-//npm install axios --save
+/*
+npm i react-scripts
+npm i nodemon
+npm i concurrently
+npm i axios
+
+*/
