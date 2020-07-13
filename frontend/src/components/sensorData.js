@@ -22,6 +22,7 @@ class sensorData extends Component {
     render() {
         var maxHeight = 170;
         var offset = -30;
+        maxHeight -= offset; 
         var value = maxHeight - ((this.state.rpiSensor / 100) * maxHeight);
         value += offset;
         var style = {
